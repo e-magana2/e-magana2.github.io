@@ -6,6 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { HttpClientModule } from '@angular/common/http';
+import { KanyeService } from './services/kanye.service';
+
+
 
 @NgModule({
   declarations: [
@@ -16,9 +20,12 @@ import { AboutComponent } from './about/about.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    KanyeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

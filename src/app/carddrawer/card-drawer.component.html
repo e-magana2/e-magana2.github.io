@@ -1,0 +1,15 @@
+<div>
+
+    <button [disabled]="remainingCards === 0" (click)="onDrawCard()">Draw A Card</button>
+
+    <button (click)="onShuffleDeck()">Shuffle Deck</button>
+
+</div>
+
+
+
+<div class="card-container" *ngFor="let card of cardsObservable | async">
+
+    <app-card (click)="onCardClick($event)" [card]="card"></app-card>
+
+</div>
